@@ -36,6 +36,7 @@ def api_key_info_retrieve(request, api_token_id):
         api_token = ApiToken.objects.get(id=api_token_id)
         eveapi = EveAPI(api_token.keyId, api_token.verificationCode)
         key_info = eveapi.account.apiKeyInfo()
+        log.info(key_info)
 
 
     serializer = APIKeyInfoSerializer(api_key_info)

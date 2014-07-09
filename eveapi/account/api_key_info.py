@@ -1,2 +1,3 @@
 class APIKeyInfo:
-    pass
+    def __init__(self):
+        pass

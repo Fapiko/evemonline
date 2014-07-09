@@ -2,3 +2,4 @@ env/
 *.pyc
 .idea/
 evemonline/settings.py
+webapp/ember/web/components

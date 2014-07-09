@@ -1,3 +1,5 @@
-__author__ = 'ljandrew'
+from __future__ import absolute_import
+from .eveapi import EveAPI
+from account import Account
 
-from eveapi import EveAPI
+__author__ = 'ljandrew'
