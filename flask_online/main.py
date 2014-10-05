@@ -1,10 +1,13 @@
 from flask import Flask, request, json, jsonify
+from flask.ext.cors import CORS
 import hashlib, uuid
 
 app = Flask(__name__)
 app.debug = True
 
 sessions = []
+
+CORS(app, resources=r'/*', headers='Content-Type')
 
 @app.route("/")
 def hello():
@@ -28,10 +31,8 @@ def session_create():
                 sessions.append(session)
 
                 return jsonify(token=token)
-            else:
-                return '{"error":"Username or password invalid"}'
+    return '{"error":"Username or password invalid"}'
 
-    return 'session'
 
 if __name__ == '__main__':
     app.run()
