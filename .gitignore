@@ -4,3 +4,4 @@ env/
 evemonline/settings.py
 webapp/ember/web/components
 webapp/angular/webroot/lib
+*.tmp.json
